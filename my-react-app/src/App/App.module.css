@@ -1,0 +1,25 @@
+.darkStyles {
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+;
+
+
+.lightStyles {
+  background-color: white;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.Daylightbtn{
+  float: right;
+  z-index: 1000;
+  background-color: white;
+}

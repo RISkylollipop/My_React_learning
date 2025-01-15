@@ -1,8 +1,12 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-
+@tailwind utilities; */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.darkmode{
+  background-color: rgb(100, 90, 90);
+  color: white;
+  text-align: center;
+}
 .Card {
   max-width: 300px;
   max-height: 400px;
@@ -75,3 +79,38 @@ input{
   margin: 10px;
 }
 
+.nightbtn, .daybtn{
+  background-color: white;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.daybtn{
+  color: black;
+}
+
+.fieldset {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  border: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type="checkbox"]{
+  margin: 10px;
+}
+
+input[type="submit"]{
+  background-color: green;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(106, 236, 106);
+  transition: all 0.5s ease;
+}

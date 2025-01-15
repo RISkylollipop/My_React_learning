@@ -50,80 +50,83 @@ function LoginForm() {
     return (
 
         <>
-            <FloatingLabel controlId="floatingInput" label="First Name" className="mb-3">
-
-                <Form.Control type="text" onChange={nameChange} name={name} placeholder="First Name" />
-
-            </FloatingLabel>
-
-            <p>name: {name}</p>
-
-            <FloatingLabel controlId="floatingInput" label="Last Name" className="mb-3">
-
-                <Form.Control type="text" name={lastname} onChange={lastnameChange} placeholder="Last Name" />
-                <p>Last Name:  <span>{lastname}</span></p>
-
-            </FloatingLabel>
-
-            <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
-
-                <Form.Control type="email" onChange={emailChange} name={email} placeholder="Email Address" />
-                <p>Email: <span> {email}</span></p>
-            </FloatingLabel>
-
-            <div className="mb-3">
-                <p>Select Gender</p>
-                <label >
-                    <input type="checkbox" value="Female"
-                        checked={gender === "Female"}
-                        onChange={genderChange} name="{gender}" />
-
-                    Female
-                </label>
+            <fieldset className="mt-5 fieldset">
+                <legend className="legend">My Registration Form</legend>
 
 
-                <label >
-                    <input type="checkbox" value="Male"
-                        checked={gender === "Male"}
-                        onChange={genderChange} name="{gender}" />
-                    Male
-                </label>
-                <p>Gender set to : <span>  {gender}</span></p>
-            </div>
+                <FloatingLabel controlId="floatingInput" label="First Name" className="mb-3">
 
-            <Form.Select name={payment} onChange={paymentChange} value={payment}>
-                <option disabled selected>Select Payment Option</option>
-                <option value="Visa">Visa</option>
-                <option value="Master Card">Master Card</option>
-                <option value="Paypal">Paypal</option>
-                <option value="Gift Card">Gift Card</option>
-            </Form.Select>
-            <p>Selcted Payment: <span> {payment}</span></p>
+                    <Form.Control type="text" onChange={nameChange} name={name} placeholder="First Name" />
+
+                </FloatingLabel>
+
+                <FloatingLabel controlId="floatingInput" label="Last Name" className="mb-3">
+
+                    <Form.Control type="text" name={lastname} onChange={lastnameChange} placeholder="Last Name" />
+                   
+
+                </FloatingLabel>
+
+                <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
+
+                    <Form.Control type="email" onChange={emailChange} name={email} placeholder="Email Address" />
+                  
+                </FloatingLabel>
+
+                <div className="mb-3">
+                    <p>Select Gender</p>
+                    <label >
+                        <input type="checkbox" value="Female"
+                            checked={gender === "Female"}
+                            onChange={genderChange} name="{gender}" />
+
+                        Female
+                    </label>
 
 
-
-
-
-            <FloatingLabel controlId="floatingPassword" label="Password">
-                <Form.Control type="password" name={password} onChange={passwordChange} placeholder="Password" />
-                <p>Password Entered: <span>{password}</span></p>
-            </FloatingLabel>
-
-            <div className="colorContainer">
-
-                <h3 className="pickColorHeading">Pick Color</h3>
-
-                <div className="colordisplay" style={{ backgroundColor: color, width: "300px", height: "300px" }}
-                    value={color}>
+                    <label >
+                        <input type="checkbox" value="Male"
+                            checked={gender === "Male"}
+                            onChange={genderChange} name="{gender}" />
+                        Male
+                    </label>
+              
                 </div>
 
-                <p className="colorCode"> <span> color code: {color}</span>
+                <Form.Select name={payment} onChange={paymentChange} value={payment}>
+                    <option disabled selected>Select Payment Option</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Master Card">Master Card</option>
+                    <option value="Paypal">Paypal</option>
+                    <option value="Gift Card">Gift Card</option>
+                </Form.Select>
+              
+
+
+
+
+
+                <FloatingLabel controlId="floatingPassword" label="Password">
+                    <Form.Control type="password" name={password} onChange={passwordChange} placeholder="Password" />
+                 
+                </FloatingLabel>
+
+                {/* <div className="colorContainer">
+
+                    <h3 className="pickColorHeading">Pick Color</h3>
+
+                    <div className="colordisplay" style={{ backgroundColor: color, width: "300px", height: "300px" }}
+                        value={color}>
+                    </div>
+
+                    <p className="colorCode"> <span> color code: {color}</span>
                     </p>
-                <input className="colorselector" type="color" value={color} onChange={colorChange} />
-            </div>
+                    <input className="colorselector" type="color" value={color} onChange={colorChange} />
+                </div> */}
 
 
-            <input type="submit" onSubmit={password} value="Submit" />
+                <input type="submit" onSubmit={password} value="Submit" />
+            </fieldset>
         </>
     );
 
